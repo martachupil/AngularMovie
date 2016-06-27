@@ -1,17 +1,29 @@
-/* Testing autoprefixer */
-.autoprefixer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.title {
+    font-size: 34px;
+    font-family: 'PT Sans', sans-serif;
 }
-/* Testing cssnext */
-.cssnext {
-    background: rgba(255, 0, 0, 0.9);
+::-webkit-input-placeholder {color:#337ab7;}
+::-moz-placeholder          {color:#337ab7;}
+/* Firefox 19+ */
+:-moz-placeholder           {color:#337ab7;}
+/* Firefox 18- */
+:-ms-input-placeholder      {color:#337ab7;}
+input[type="text"] {
+    width: 70%;
+    margin-top: 10px;
+    color: #000;
 }
-.fuck {
-    display: none;
+img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: table;
 }
-/* Testing precss */
-.precss {
-background: green
+.movies {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 13px;
 }

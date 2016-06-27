@@ -1,20 +1,28 @@
-/* Testing autoprefixer */
-.autoprefixer {
-    display: flex;
+.title {
+    font-size: 34px;
+    font-family: 'PT Sans', sans-serif;
 }
-/* Testing cssnext */
-.cssnext {
-    background: color(red alpha(-10%));
+::-webkit-input-placeholder {color:#337ab7;}
+::-moz-placeholder          {color:#337ab7;}/* Firefox 19+ */
+:-moz-placeholder           {color:#337ab7;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#337ab7;}
+input[type="text"] {
+    width: 70%;
+    margin-top: 10px;
+    color: #000;
 }
-.fuck {
-    display: none;
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: table;
 }
-/* Testing precss */
-.precss {
-@if 3 < 5 {
-    background: green;
-}
-@else {
-    background: blue;
-}
+.movies {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 13px;
 }

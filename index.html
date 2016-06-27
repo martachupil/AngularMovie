@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+    <script src="js/movies.js"></script>
+    <link rel="stylesheet" href="dest/style.css">
+    <link rel="stylesheet" href="dest/bootstrap.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
+<body ng-app="movieModule">
+<div class="container-fluid">
+    <div class="container" ng-controller="myController">
+        <div class="row bg-primary">
+            <div class="col-md-6 title">MovieDatabase</div>
+            <div class="col-md-6">Search : <input type="text" placeholder="Search movies" ng-model="searchText"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 movies" ng-repeat="movie in movies | filter:searchText">
+                <p><img ng-src="{{movie.image}}"></p>
+                <p>{{movie.name}}</p>
+                <p>Year : {{movie.year}}</p>
+                <p>Director : {{movie.director}}</p>
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
