@@ -8,6 +8,9 @@
 .cssnext {
     background: rgba(255, 0, 0, 0.9);
 }
+.fuck {
+    display: none;
+}
 /* Testing precss */
 .precss {
 background: green

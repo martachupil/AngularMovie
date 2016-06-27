@@ -6,6 +6,9 @@
 .cssnext {
     background: color(red alpha(-10%));
 }
+.fuck {
+    display: none;
+}
 /* Testing precss */
 .precss {
 @if 3 < 5 {
