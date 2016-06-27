@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/movies.js"></script>
     <link rel="stylesheet" href="dest/style.css">
     <link rel="stylesheet" href="dest/bootstrap.min.css">
@@ -13,16 +15,29 @@
 <body ng-app="movieModule">
 <div class="container-fluid">
     <div class="container" ng-controller="myController">
-        <div class="row bg-primary">
+        <div class="row bg-primary main">
             <div class="col-md-6 title">MovieDatabase</div>
             <div class="col-md-6">Search : <input type="text" placeholder="Search movies" ng-model="searchText"></div>
         </div>
         <div class="row">
             <div class="col-md-4 movies" ng-repeat="movie in movies | filter:searchText">
-                <p><img ng-src="{{movie.image}}"></p>
+                <p><img class="img-circle" ng-src="{{movie.image}}" ng-click="info($index)"></p>
                 <p>{{movie.name}}</p>
                 <p>Year : {{movie.year}}</p>
                 <p>Director : {{movie.director}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
             </div>
         </div>
     </div>
